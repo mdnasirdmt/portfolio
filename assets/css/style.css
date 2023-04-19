@@ -759,16 +759,19 @@ section {
 .testimonials .testimonial-item {
   box-sizing: content-box;
   text-align: center;
-  min-height: 320px;
+  min-height: 325px;
 }
 
+.testimonial-item{
+  border: 1px solid rgb(68, 66, 66);
+}
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 320px;
+  width: 325px;
   /* border-radius: 50%; */
   margin: 0 auto;
-  border: 1px solid rgb(68, 66, 66);
-  border-radius: 5px;
+  /* border: 1px solid rgb(68, 66, 66); */
+  /* border-radius: 5px; */
 }
 
 .testimonials .testimonial-item h3 {
