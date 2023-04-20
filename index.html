@@ -63,9 +63,20 @@
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li>
-            <a href="https://drive.google.com/uc?export=download&id=1eVgblh2G6v_8Qwp_QeV9iNuNETgPQLSN">
+            <!-- <a target="_blank" href="https://drive.google.com/uc?export=download&id=1eVgblh2G6v_8Qwp_QeV9iNuNETgPQLSN">
               <i class="bi bi-file-earmark-person"></i> <span>Resume</span>
-            </a>
+            </a> -->
+
+            <div id="resume">
+              <button id="resume-btn"
+                onclick="window.open('https://drive.google.com/file/d/1eVgblh2G6v_8Qwp_QeV9iNuNETgPQLSN/view?usp=sharing', '_blank'); downloadResume('https://drive.google.com/uc?id=1eVgblh2G6v_8Qwp_QeV9iNuNETgPQLSN&export=download')">
+                <i class="bi bi-file-earmark-person"></i> <span>Resume</span>
+              </button>
+            </div>
+
+
+            <br>
+
           </li>
           <li>
             <a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
@@ -306,7 +317,7 @@
                 <h4>
                   <p style="color: black; font-size: large ">
                     This is learning management system, created rest apis for the this,
-                    and learnt a lot of new things ex- team collaboration. 
+                    and learnt a lot of new things ex- team collaboration.
                     <br>
                     <b>Tech Used:</b> Java, Spring Boot,
                     Spring Data JPA, MySQL, sql
@@ -340,7 +351,7 @@
                 <h4>
                   <p style="color: black; font-size: large ">
                     This is a meeting scheduling system, created rest apis for
-                    this, learnt a lot of new things about team collaboration.      
+                    this, learnt a lot of new things about team collaboration.
                     <br>
                     <b>Tech Used:</b> Java, Spring Boot,
                     Spring Data JPA, Spring Security, MySQL, sql
@@ -361,15 +372,16 @@
                 <h3>Blog App</h3>
 
                 <div class="icon-container">
-                  <a target="_blank" href="https://drive.google.com/file/d/10RBTfJI6zhi4lwswoi07hpvPLNYzTFWa/view?usp=sharing" class="icon"><i
-                      class="bi bi-eye-fill"></i></a>
+                  <a target="_blank"
+                    href="https://drive.google.com/file/d/10RBTfJI6zhi4lwswoi07hpvPLNYzTFWa/view?usp=sharing"
+                    class="icon"><i class="bi bi-eye-fill"></i></a>
                   <a target="_blank" href="https://github.com/mdnasirdmt/BlogApp" class="icon"><i
                       class="bi bi-github"></i></a>
                 </div>
 
                 <h4>
                   <p style="color: black; font-size: large ">
-                    We built Blog Application, 
+                    We built Blog Application,
                     API performs all the fundamental CRUD operations with user validation
                     <br>
                     <b>Tech Used:</b> Java, Spring Boot,
@@ -391,7 +403,9 @@
                 <h3>Payment Wallet</h3>
 
                 <div class="icon-container">
-                  <a target="_blank" href="https://drive.google.com/file/d/1yY8KiR0l48Sp4eLwoejMxuVy259DGbYY/view?usp=sharing" class="icon"><i class="bi bi-eye-fill"></i></a>
+                  <a target="_blank"
+                    href="https://drive.google.com/file/d/1yY8KiR0l48Sp4eLwoejMxuVy259DGbYY/view?usp=sharing"
+                    class="icon"><i class="bi bi-eye-fill"></i></a>
                   <a target="_blank" href="https://github.com/Bhasker23/Payment_Wallet_Application" class="icon"><i
                       class="bi bi-github"></i></a>
                 </div>
@@ -402,7 +416,7 @@
                     collaborator.
                     <br>
                     <b>Tech Used:</b> Java, Spring Framework, Spring Boot,
-                       Hibernate, MySQL
+                    Hibernate, MySQL
                   </p>
                   <!-- <p style="color: black; font-size: large " class="techStack">
                     <b>Tech Used:</b> Java, Spring Framework, Spring Boot,
@@ -454,7 +468,7 @@
     <section id="contact" class="contact">
       <div class="container">
         <div class="section-title">
-          <h2 >Contact</h2>
+          <h2>Contact</h2>
           Get in Touch <br />
           Got a project? Reach out and let's work together on something
           exciting. Big or small. Mobile or web.
@@ -606,6 +620,18 @@
           alert('Error sending email: ' + error);
         });
     });
+  </script>
+
+  <script>
+    // resume button
+    function downloadResume(fileUrl) {
+      var link = document.createElement("a");
+      link.href = fileUrl;
+      link.download = "resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   </script>
 </body>
 
